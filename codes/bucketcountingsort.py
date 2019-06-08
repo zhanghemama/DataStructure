@@ -11,11 +11,9 @@ fileNames = ['./phone1.txt', './phone2.txt', './phone3.txt']
 class PhoneNumbersBucketSort():
     
     def bucketSort(self,phoneNumbers):
-        print('begin')
         sorter = BucketSort(10)
         for index in range(3):
             sorter.sortViaBitIndex(phoneNumbers, 10-index)
-        print('end')
     
 def sortFilesTogether():
     phoneNumbers = []
@@ -29,11 +27,9 @@ def sortFilesTogether():
     writeBack('./output.txt', phoneNumbers)
     
 def baseSort(phoneNumbers):
-    print('begin')
     sorter = CountingSort()
     for index in range(3):
         sorter.sortViaBitIndex(phoneNumbers, 10-index)
-    print('end')
 
 def writeBack(fileName, phoneNumbers):
     
