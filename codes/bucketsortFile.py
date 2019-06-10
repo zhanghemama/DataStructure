@@ -4,17 +4,14 @@ import random
 class BucketSort():
     def __init__(self,bucketsNumber):
         self.bucketsNumber = bucketsNumber
-      
-    def getBucketIndex(self,x):
-        return (int)(x)
-
+    
     def sort(self, inList):
         buckets = []
         for x in range(0, self.bucketsNumber):
             buckets.append([])
 
         for x in inList:
-            buckets[self.getBucketIndex(x)].append(x)
+            buckets[(int)(x)].append(x)
 
         inList.clear()
         for x in range(0, self.bucketsNumber):
@@ -27,7 +24,7 @@ class BucketSort():
             buckets.append([])
         
         for x in inList:
-            bucketIndex = self.getBucketIndex(x[index])
+            bucketIndex = (int)(x[index])
             buckets[bucketIndex].append(x)
             
         inList.clear()    
